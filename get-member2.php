@@ -185,6 +185,8 @@ class Application
             exit(1);
         }
 
+	var_dump(get_class_methods($htmlDoc));
+
         $phpQueryObject = $htmlDoc->export();
 
         $text = $phpQueryObject["head"]["title"]->text() . "\n";
